@@ -88,18 +88,6 @@ public class FileHandler {
 
 	}
 
-	public static void printSmells(List<Smell> smells) {
-		System.out.println("number of smells:" + smells.size());
-		for (Smell smell : smells) {
-			smells.get(1);
-			System.out.println("name:      " + smell.getName());
-			System.out.println("id:        " + smell.getId());
-			System.out.println("priority:  " + smell.getPriority());
-		}
-		System.out.println("ASDASDASDWQDQW:::: " + smells.get(0).getId());
-
-	}
-
 	public static void loadRepairs(List<Repair> repairs, List<Smell> smells) {
 
 		try {
@@ -117,7 +105,9 @@ public class FileHandler {
 				if (repairNode.getNodeType() == Node.ELEMENT_NODE) {
 
 					Element repairE = (Element) repairNode;
+					repairTemp.setId(Integer.parseInt(repairE.getElementsByTagName("id").item(0).getTextContent()));
 					repairTemp.setName(repairE.getElementsByTagName("name").item(0).getTextContent());
+					repairTemp.setDescription(repairE.getElementsByTagName("description").item(0).getTextContent());
 					// System.out.println("name: " +
 					// repairE.getElementsByTagName("name").item(0).getTextContent());
 
@@ -127,31 +117,48 @@ public class FileHandler {
 
 						if (fixNode.getNodeType() == Node.ELEMENT_NODE) {
 							Element fixE = (Element) fixNode;
-							NodeList fixsmellXML = repairE.getElementsByTagName("fixsmell");
-							System.out.println("fixsmell " +fixsmellXML.item(j).getTextContent());
-							NodeList priorityXML = repairE.getElementsByTagName("priority");
-							System.out.println("priority " +priorityXML.item(j).getTextContent());	
+
+							RepairFix repairFixTepm = new RepairFix();
+							NodeList fixsmellXML = fixE.getElementsByTagName("fixsmell");
+							repairFixTepm.setSmell(smells.get(Integer.parseInt(fixsmellXML.item(0).getTextContent())));
+							// System.out.println("fixsmell " +
+							// fixsmellXML.item(0).getTextContent());
+
+							NodeList priorityXML = fixE.getElementsByTagName("priority");
+							repairFixTepm.setPriority(Integer.parseInt(priorityXML.item(0).getTextContent()));
+							// System.out.println("priority " +
+							// priorityXML.item(0).getTextContent());
+							repairTemp.getFixes().add(repairFixTepm);
 						}
 
-						//repairTemp.getFixes().add(smells.get(Integer.parseInt(fixXML.item(j).getTextContent())));
+						// repairTemp.getFixes().add(smells.get(Integer.parseInt(fixXML.item(j).getTextContent())));
 						// System.out.println("fix: " +
 						// fixXML.item(j).getTextContent());
 					}
 
 					NodeList causeXML = repairE.getElementsByTagName("cause");
 					for (int j = 0; j < causeXML.getLength(); j++) {
-						
+
 						Node fixNode = causeXML.item(j);
 
 						if (fixNode.getNodeType() == Node.ELEMENT_NODE) {
-							Element fixE = (Element) fixNode;
-							NodeList causesmellXML = repairE.getElementsByTagName("causesmell");
-							System.out.println("causesmell " +causesmellXML.item(j).getTextContent());
-							NodeList probabilityXML = repairE.getElementsByTagName("probabilty");
-							System.out.println("prob " +probabilityXML.item(j).getTextContent());	
+							Element causeE = (Element) fixNode;
+
+							RepairCause repaircauseTemp = new RepairCause();
+							NodeList causesmellXML = causeE.getElementsByTagName("causesmell");
+							repaircauseTemp
+									.setSmell(smells.get(Integer.parseInt(causesmellXML.item(0).getTextContent())));
+							// System.out.println("causesmell " +
+							// causesmellXML.item(0).getTextContent());
+
+							NodeList probabilityXML = causeE.getElementsByTagName("probabilty");
+							repaircauseTemp.setProbabilty(Integer.parseInt(probabilityXML.item(0).getTextContent()));
+							// System.out.println("prob " +
+							// probabilityXML.item(0).getTextContent());
+
 						}
-						
-						//repairTemp.getCauses().add(smells.get(Integer.parseInt(causeXML.item(j).getTextContent())));
+
+						// repairTemp.getCauses().add(smells.get(Integer.parseInt(causeXML.item(j).getTextContent())));
 						// System.out.println("cause: " +
 						// causeXML.item(j).getTextContent());
 					}
@@ -165,16 +172,38 @@ public class FileHandler {
 		}
 	}
 
+	public static void printSmells(List<Smell> smells) {
+		System.out.println("number of smells:" + smells.size());
+		for (Smell smell : smells) {
+			System.out.println("id:        " + smell.getId());
+			System.out.println("name:      " + smell.getName());
+			System.out.println("priority:  " + smell.getPriority());
+			System.out.println("--------------------");
+		}
+		System.out.println("------smells end-------------");
+	}
+
 	public static void printrepairs(List<Repair> repairs) {
 		for (Repair repair : repairs) {
-			System.out.println("name: " + repair.getName());
+			System.out.println("id          : " + repair.getId());
+			System.out.println("name        : " + repair.getName());
+			System.out.println("description : " + repair.getDescription());
+
 			for (RepairCause cause : repair.getCauses()) {
-				System.out.println("cause:" + cause.getSmell().getName());
+				System.out.println("cause :" + cause.getSmell().getName());
+				System.out.println("prob  :" + cause.getProbabilty());
+				System.out.println("------------");
+
 			}
 			for (RepairFix fix : repair.getFixes()) {
-				System.out.println("fix: " + fix.getSmell().getName());
+				System.out.println("fix   : " + fix.getSmell().getName());
+				System.out.println("prior : " + fix.getPriority());
+				System.out.println("------------");
+
 			}
+			System.out.println("----next----");
 		}
+		System.out.println("--------repairs end----------");
 	}
 
 }

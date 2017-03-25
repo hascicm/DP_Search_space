@@ -4,6 +4,9 @@ public class RepairCause {
 	private Smell smell;
 	private int probabilty;
 
+	public RepairCause() {
+	}
+
 	public RepairCause(Smell smell, int probabilty) {
 		super();
 		this.smell = smell;

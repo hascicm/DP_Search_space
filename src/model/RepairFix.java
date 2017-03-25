@@ -4,6 +4,9 @@ public class RepairFix {
 	private Smell smell;
 	private int priority;
 
+	public RepairFix() {
+	}
+
 	public RepairFix(Smell smell, int priority) {
 		this.smell = smell;
 		this.priority = priority;

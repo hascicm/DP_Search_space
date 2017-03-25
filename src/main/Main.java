@@ -18,8 +18,8 @@ public class Main {
 		// FileHandler.printSmells(smells);
 		FileHandler.loadRepairs(repairs, smells);
 
-		// FileHandler.printSmells(smells);
-		// FileHandler.printrepairs(repairs);
+		 FileHandler.printSmells(smells);
+		 FileHandler.printrepairs(repairs);
 
 		System.out.println("number of loaded smells   : " + smells.size());
 		System.out.println("number of loaded repairs  : " + repairs.size());
