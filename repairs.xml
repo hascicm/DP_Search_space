@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<repairs>
+	<repair>
+		<id>1</id>
+		<name>rep1</name>
+		<fix>
+			<fixsmell>6</fixsmell>
+			<priority></priority>
+		</fix>
+		<cause>
+			<causesmell>2</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
+	</repair>
+	
+	<repair>
+		<id>2</id>
+		<name>rep2</name>
+		<fix>
+			<fixsmell>1</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<cause>
+			<causesmell>4</causesmell>
+			<probabilty></probabilty>
+		</cause>
+	</repair>
+	
+	<repair>
+		<id>3</id>
+		<name>rep3</name>
+		<fix>
+			<fixsmell>2</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	
+	<repair>
+		<id>4</id>
+		<name>rep4</name>
+		<fix>
+			<fixsmell>4</fixsmell>
+			<priority>1</priority>
+		</fix>	
+	</repair>
+</repairs>
