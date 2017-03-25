@@ -5,7 +5,7 @@
 		<name>rep1</name>
 		<fix>
 			<fixsmell>6</fixsmell>
-			<priority></priority>
+			<priority>0</priority>
 		</fix>
 		<cause>
 			<causesmell>2</causesmell>
@@ -22,7 +22,7 @@
 		</fix>
 		<cause>
 			<causesmell>4</causesmell>
-			<probabilty></probabilty>
+			<probabilty>0</probabilty>
 		</cause>
 	</repair>
 	
@@ -40,6 +40,18 @@
 		<name>rep4</name>
 		<fix>
 			<fixsmell>4</fixsmell>
+			<priority>1</priority>
+		</fix>	
+		<fix>
+			<fixsmell>5</fixsmell>
+		<cause>
+			<causesmell>50</causesmell>
+			<probabilty>50</probabilty>
+		</cause>	
+			<priority>2</priority>
+		</fix>	
+				<fix>
+			<fixsmell>6</fixsmell>
 			<priority>1</priority>
 		</fix>	
 	</repair>

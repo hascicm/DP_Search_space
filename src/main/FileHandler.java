@@ -75,8 +75,8 @@ public class FileHandler {
 					// System.out.println("name: " +
 					// repairE.getElementsByTagName("name").item(0).getTextContent());
 
-					smellTemp.setPriority(Integer
-							.parseInt(repairE.getElementsByTagName("priority").item(0).getTextContent()));
+					smellTemp.setPriority(
+							Integer.parseInt(repairE.getElementsByTagName("priority").item(0).getTextContent()));
 					// System.out.println("priority: " +
 					// repairE.getElementsByTagName("name").item(0).getTextContent());
 					smells.add(smellTemp);
@@ -96,7 +96,7 @@ public class FileHandler {
 			System.out.println("id:        " + smell.getId());
 			System.out.println("priority:  " + smell.getPriority());
 		}
-		System.out.println("ASDASDASDWQDQW:::: "+ smells.get(0).getId());
+		System.out.println("ASDASDASDWQDQW:::: " + smells.get(0).getId());
 
 	}
 
@@ -121,21 +121,44 @@ public class FileHandler {
 					// System.out.println("name: " +
 					// repairE.getElementsByTagName("name").item(0).getTextContent());
 
+					NodeList fixXML = repairE.getElementsByTagName("fix");
+					for (int j = 0; j < fixXML.getLength(); j++) {
+						Node fixNode = fixXML.item(j);
+
+						if (fixNode.getNodeType() == Node.ELEMENT_NODE) {
+							Element fixE = (Element) fixNode;
+							NodeList fixsmellXML = repairE.getElementsByTagName("fixsmell");
+							System.out.println("fixsmell " +fixsmellXML.item(j).getTextContent());
+							NodeList priorityXML = repairE.getElementsByTagName("priority");
+							System.out.println("priority " +priorityXML.item(j).getTextContent());	
+						}
+
+						//repairTemp.getFixes().add(smells.get(Integer.parseInt(fixXML.item(j).getTextContent())));
+						// System.out.println("fix: " +
+						// fixXML.item(j).getTextContent());
+					}
+
 					NodeList causeXML = repairE.getElementsByTagName("cause");
 					for (int j = 0; j < causeXML.getLength(); j++) {
-						repairTemp.getCauses().add(smells.get(Integer.parseInt(causeXML.item(j).getTextContent())));
+						
+						Node fixNode = causeXML.item(j);
+
+						if (fixNode.getNodeType() == Node.ELEMENT_NODE) {
+							Element fixE = (Element) fixNode;
+							NodeList causesmellXML = repairE.getElementsByTagName("causesmell");
+							System.out.println("causesmell " +causesmellXML.item(j).getTextContent());
+							NodeList probabilityXML = repairE.getElementsByTagName("probabilty");
+							System.out.println("prob " +probabilityXML.item(j).getTextContent());	
+						}
+						
+						//repairTemp.getCauses().add(smells.get(Integer.parseInt(causeXML.item(j).getTextContent())));
 						// System.out.println("cause: " +
 						// causeXML.item(j).getTextContent());
 					}
 
-					NodeList fixXML = repairE.getElementsByTagName("fix");
-					for (int j = 0; j < fixXML.getLength(); j++) {
-						repairTemp.getFixes().add(smells.get(Integer.parseInt(fixXML.item(j).getTextContent())));
-						// System.out.println("fix: " +
-						// fixXML.item(j).getTextContent());
-					}
 					repairs.add(repairTemp);
 				}
+				System.out.println("------------------------");
 			}
 		} catch (ParserConfigurationException | IOException | SAXException e) {
 			e.printStackTrace();
