@@ -13,6 +13,7 @@ public class Main {
 	public static List<Smell> smells = new ArrayList<Smell>();
 
 	public static void main(String[] args) {
+		System.out.println("Smt test...");
 
 		FileHandler.loadSmells(smells);
 		// FileHandler.printSmells(smells);
