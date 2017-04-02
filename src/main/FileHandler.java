@@ -61,31 +61,19 @@ public class FileHandler {
 			for (int i = 0; i < smellList.getLength(); i++) {
 				Node repairNode = smellList.item(i);
 				Smell smellTemp = new Smell();
-				// System.out.println("\nCurrent Element :" +
-				// repairNode.getNodeName());
-
 				if (repairNode.getNodeType() == Node.ELEMENT_NODE) {
 
 					Element repairE = (Element) repairNode;
 					smellTemp.setId(Integer.parseInt(repairE.getElementsByTagName("id").item(0).getTextContent()));
-					// System.out.println("id: " +
-					// repairE.getElementsByTagName("name").item(0).getTextContent());
-
 					smellTemp.setName(repairE.getElementsByTagName("name").item(0).getTextContent());
-					// System.out.println("name: " +
-					// repairE.getElementsByTagName("name").item(0).getTextContent());
-
 					smellTemp.setPriority(
 							Integer.parseInt(repairE.getElementsByTagName("priority").item(0).getTextContent()));
-					// System.out.println("priority: " +
-					// repairE.getElementsByTagName("name").item(0).getTextContent());
 					smells.add(smellTemp);
 				}
 			}
 		} catch (ParserConfigurationException | IOException | SAXException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public static void loadRepairs(List<Repair> repairs, List<Smell> smells) {
@@ -99,8 +87,6 @@ public class FileHandler {
 			for (int i = 0; i < repairList.getLength(); i++) {
 				Node repairNode = repairList.item(i);
 				Repair repairTemp = new Repair();
-				// System.out.println("\nCurrent Element :" +
-				// repairNode.getNodeName());
 
 				if (repairNode.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -108,8 +94,6 @@ public class FileHandler {
 					repairTemp.setId(Integer.parseInt(repairE.getElementsByTagName("id").item(0).getTextContent()));
 					repairTemp.setName(repairE.getElementsByTagName("name").item(0).getTextContent());
 					repairTemp.setDescription(repairE.getElementsByTagName("description").item(0).getTextContent());
-					// System.out.println("name: " +
-					// repairE.getElementsByTagName("name").item(0).getTextContent());
 
 					NodeList fixXML = repairE.getElementsByTagName("fix");
 					for (int j = 0; j < fixXML.getLength(); j++) {
@@ -121,19 +105,11 @@ public class FileHandler {
 							RepairFix repairFixTepm = new RepairFix();
 							NodeList fixsmellXML = fixE.getElementsByTagName("fixsmell");
 							repairFixTepm.setSmell(smells.get(Integer.parseInt(fixsmellXML.item(0).getTextContent())));
-							// System.out.println("fixsmell " +
-							// fixsmellXML.item(0).getTextContent());
-
 							NodeList priorityXML = fixE.getElementsByTagName("priority");
 							repairFixTepm.setPriority(Integer.parseInt(priorityXML.item(0).getTextContent()));
-							// System.out.println("priority " +
-							// priorityXML.item(0).getTextContent());
+
 							repairTemp.getFixes().add(repairFixTepm);
 						}
-
-						// repairTemp.getFixes().add(smells.get(Integer.parseInt(fixXML.item(j).getTextContent())));
-						// System.out.println("fix: " +
-						// fixXML.item(j).getTextContent());
 					}
 
 					NodeList causeXML = repairE.getElementsByTagName("cause");
@@ -148,19 +124,11 @@ public class FileHandler {
 							NodeList causesmellXML = causeE.getElementsByTagName("causesmell");
 							repaircauseTemp
 									.setSmell(smells.get(Integer.parseInt(causesmellXML.item(0).getTextContent())));
-							// System.out.println("causesmell " +
-							// causesmellXML.item(0).getTextContent());
-
 							NodeList probabilityXML = causeE.getElementsByTagName("probabilty");
 							repaircauseTemp.setProbabilty(Integer.parseInt(probabilityXML.item(0).getTextContent()));
-							// System.out.println("prob " +
-							// probabilityXML.item(0).getTextContent());
 
+							repairTemp.getCauses().add(repaircauseTemp);
 						}
-
-						// repairTemp.getCauses().add(smells.get(Integer.parseInt(causeXML.item(j).getTextContent())));
-						// System.out.println("cause: " +
-						// causeXML.item(j).getTextContent());
 					}
 
 					repairs.add(repairTemp);
@@ -189,15 +157,15 @@ public class FileHandler {
 			System.out.println("name        : " + repair.getName());
 			System.out.println("description : " + repair.getDescription());
 
-			for (RepairCause cause : repair.getCauses()) {
-				System.out.println("cause :" + cause.getSmell().getName());
-				System.out.println("prob  :" + cause.getProbabilty());
-				System.out.println("------------");
-
-			}
 			for (RepairFix fix : repair.getFixes()) {
 				System.out.println("fix   : " + fix.getSmell().getName());
 				System.out.println("prior : " + fix.getPriority());
+				System.out.println("------------");
+
+			}
+			for (RepairCause cause : repair.getCauses()) {
+				System.out.println("cause :" + cause.getSmell().getName());
+				System.out.println("prob  :" + cause.getProbabilty());
 				System.out.println("------------");
 
 			}

@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.RadialGradientPaint;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -18,22 +19,39 @@ public class Main {
 		// FileHandler.printSmells(smells);
 		FileHandler.loadRepairs(repairs, smells);
 
-		 FileHandler.printSmells(smells);
-		 FileHandler.printrepairs(repairs);
+		// FileHandler.printSmells(smells);
+		// FileHandler.printrepairs(repairs);
 
 		System.out.println("number of loaded smells   : " + smells.size());
 		System.out.println("number of loaded repairs  : " + repairs.size());
-
+		
 		State s = new State();
 		s.getSmells().add(smells.get(6));
 		s.getSmells().add(smells.get(2));
 
 		s.getAvanlibleRepairs().add(repairs.get(0));
-
+		s.getAvanlibleRepairs().add(repairs.get(1));
+		s.getAvanlibleRepairs().add(repairs.get(2));
+		
+		s.printSmells();
+		s.printAvanlibleRepairs();
+		
+		ArrayList<State> states =  s.applyRepairs();
+		
+		System.out.println("-output-");
+	
+		for (State state : states){
+			
+			state.printSmells();
+			System.out.println("-----END-----");
+		}
+		
+		
 		// s.applyRepair(repairs.get(0));
-		s.applyRepair(repairs.get(1));
-
-		State s2 = new State();
+//		s.applyRepair(repairs.get(0));
+//		s.applyRepair(repairs.get(2));
+//		s.applyRepair(repairs.get(3));
+/*		State s2 = new State();
 
 		s2.getSmells().add(smells.get(2));
 		s2.getSmells().add(smells.get(6));
@@ -43,6 +61,6 @@ public class Main {
 
 		if (s.getSmells().containsAll(s2.getSmells()) && s2.getSmells().containsAll(s.getSmells()))
 			System.out.println("comapre sucess");
-
+*/
 	}
 }

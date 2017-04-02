@@ -25,16 +25,19 @@
 		</fix>
 		<cause>
 			<causesmell>4</causesmell>
-			<probabilty>0</probabilty>
+			<probabilty>100</probabilty>
 		</cause>
 	</repair>	
 	<repair>
 		<id>3</id>
 		<name>rep3</name>
 		<description>aaaaaaaaaaaaaaaa</description>
-		
 		<fix>
 			<fixsmell>2</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>6</fixsmell>
 			<priority>1</priority>
 		</fix>
 	</repair>
