@@ -1,38 +1,120 @@
 <?xml version="1.0"?>
 <smells>
 	<smell>
-		<id>0</id>
-		<name>smell0</name>
+	<id>0</id>
+		<name>Large Class</name>
 		<priority>10</priority>
 	</smell>
 	<smell>
-		<id>1</id>
-		<name>smell1</name>
+	<id>1</id>
+		<name>Long method</name>
+		<priority>4</priority>
+	</smell>
+	<smell>
+	<id>2</id>
+		<name>Long Parameter List</name>
+		<priority>4</priority>
+	</smell>
+	
+	<smell>
+	<id>3</id>
+		<name>Feature Envy</name>
 		<priority>5</priority>
 	</smell>
 	<smell>
-		<id>2</id>
-		<name>smell2</name>
-		<priority>4</priority>
+	<id>4</id>
+		<name>Comments</name>
+		<priority>5</priority>
 	</smell>
+	<smell>
+	<id>5</id>
+		<name>Duplicated Code</name>
+		<priority>5</priority>
+	</smell>
+	<smell>
+	<id>6</id>
+		<name>Divergent Changes</name>
+		<priority>5</priority>
+	</smell>
+	<smell>
+	<id>7</id>
+		<name>Shotgun Strategy</name>
+		<priority>5</priority>
+	</smell>
+	<smell>
+	<id>8</id>
+		<name>Switch Statement</name>
+		<priority>5</priority>
+	</smell>
+	
+	<smell>
+	<id>9</id>
+		<name>Data Class</name>
+		<priority>6</priority>
+	</smell>
+	<smell>
+	<id>10</id>
+		<name>Lazy Class</name>
+		<priority>6</priority>
+	</smell>
+
+	
+	<smell>
+		<id>11</id>
+		<name>Alternative Classes with Different Interfaces</name>
+		<priority>7</priority>
+	</smell>
+	<smell>
+		<id>12</id>
+		<name>Parallel Inheritance Hierarchies</name>
+		<priority>7</priority>
+	</smell>
+	<smell>
+		<id>13</id>
+		<name>Refused Bequest</name>
+		<priority>7</priority>
+	</smell>
+	
+	<smell>
+		<id>14</id>
+		<name>Speculative Generality</name>
+		<priority>8</priority>
+	</smell>
+	
 		<smell>
-		<id>3</id>
-		<name>smell3</name>
-		<priority>4</priority>
+		<id>15</id>
+		<name>Data Clumps</name>
+		<priority>9</priority>
 	</smell>
-		<smell>
-		<id>4</id>
-		<name>smell4</name>
-		<priority>4</priority>
+	<smell>
+		<id>16</id>
+		<name>Temporary Field</name>
+		<priority>9</priority>
 	</smell>
-		<smell>
-		<id>5</id>
-		<name>smell5</name>
-		<priority>4</priority>
+	<smell>
+		<id>17</id>
+		<name>Primitive Obsession</name>
+		<priority>9</priority>
 	</smell>
-		<smell>
-		<id>6</id>
-		<name>smell6</name>
-		<priority>4</priority>
+	
+	<smell>
+		<id>18</id>
+		<name>Inappropriate Intimacy</name>
+		<priority>10</priority>
 	</smell>
+	<smell>
+		<id>19</id>
+		<name>Middle Man</name>
+		<priority>10</priority>
+	</smell>
+	<smell>
+		<id>20</id>
+		<name>Message Chains</name>
+		<priority>10</priority>
+	</smell>
+	<smell>
+		<id>21</id>
+		<name>Incomplete Library Class</name>
+		<priority>10</priority>
+	</smell>	
 </smells>

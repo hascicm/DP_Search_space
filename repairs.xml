@@ -1,66 +1,779 @@
 <?xml version="1.0"?>
 <repairs>
 	<repair>
-		<id>1</id>
-		<name>rep1</name>
-		<description>aaaaaaaaaaaaaaaa</description>
-		<fix>
-			<fixsmell>6</fixsmell>
-			<priority>0</priority>
-		</fix>
-		<cause>
-			<causesmell>2</causesmell>
-			<probabilty>100</probabilty>
-		</cause>
+		<id>0</id>
+		<name>Add Parameter</name>
+		<description>description</description>
 	</repair>
-	
+	<repair>
+		<id>1</id>
+		<name>Change Bidirectional Association to Unidirectional</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>18</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
 	<repair>
 		<id>2</id>
-		<name>rep2</name>
-		<description>aaaaaaaaaaaaaaaa</description>
-		
+		<name>Change Reference to Value</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>3</id>
+		<name>Change Unidirectional Association to Bidirectional</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>4</id>
+		<name>Change Value to Reference</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>5</id>
+		<name>Collapse Hierarchy</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>10</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>14</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>6</id>
+		<name>Consolidate Conditional Expression</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>7</id>
+		<name>Consolidate Duplicate Conditional Fragments</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>8</id>
+		<name>Decompose Conditional</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>1</fixsmell>
+			<priority>5</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>9</id>
+		<name>Duplicate Observed Data</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>0</fixsmell>
+			<priority>5</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>10</id>
+		<name>Dynamic Method Definition</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>11</id>
+		<name>Eagerly Initialized Attribute</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>12</id>
+		<name>Encapsulate Collection</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>13</id>
+		<name>Encapsulate Downcast</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>14</id>
+		<name>Encapsulate Field</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>15</id>
+		<name>Extract Class</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>0</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>17</fixsmell>
+			<priority>5</priority>
+		</fix>
+		<fix>
+			<fixsmell>16</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>18</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>5</fixsmell>
+			<priority>3</priority>
+		</fix>
+		<fix>
+			<fixsmell>6</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>16</id>
+		<name>Extract Interface</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>0</fixsmell>
+			<priority>4</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>17</id>
+		<name>Extract Method</name>
+		<description>description</description>
 		<fix>
 			<fixsmell>1</fixsmell>
 			<priority>1</priority>
 		</fix>
-		<cause>
-			<causesmell>4</causesmell>
-			<probabilty>100</probabilty>
-		</cause>
-	</repair>	
+		<fix>
+			<fixsmell>20</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>4</priority>
+		</fix>
+		<fix>
+			<fixsmell>3</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>4</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>5</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>8</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
 	<repair>
-		<id>3</id>
-		<name>rep3</name>
-		<description>aaaaaaaaaaaaaaaa</description>
+		<id>18</id>
+		<name>Extract Module</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>19</id>
+		<name>Extract Subclass</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>0</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>20</id>
+		<name>Extract Superclass</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>11</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>21</id>
+		<name>Extract Surrounding Method</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>22</id>
+		<name>Extract Variable</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>23</id>
+		<name>Form Template Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>5</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>24</id>
+		<name>Hide Delegate</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>18</fixsmell>
+			<priority>3</priority>
+		</fix>
+		<fix>
+			<fixsmell>20</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>25</id>
+		<name>Hide Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>5</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>26</id>
+		<name>Inline Class</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>10</fixsmell>
+			<priority>3</priority>
+		</fix>
+		<fix>
+			<fixsmell>7</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>14</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>27</id>
+		<name>Inline Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>20</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>28</id>
+		<name>Inline Module</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>29</id>
+		<name>Inline Temp</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>30</id>
+		<name>Introduce Assertion</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>4</fixsmell>
+			<priority>4</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>31</id>
+		<name>Introduce Class Annotation</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>32</id>
+		<name>Introduce Expression Builder</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>33</id>
+		<name>Introduce Foreign Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>20</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>34</id>
+		<name>Introduce Gateway</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>35</id>
+		<name>Introduce Local Extension</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>20</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>36</id>
+		<name>Introduce Named Parameter</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>37</id>
+		<name>Introduce Null Object</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>16</fixsmell>
+			<priority>3</priority>
+		</fix>
+		<fix>
+			<fixsmell>8</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>38</id>
+		<name>Introduce Parameter Object</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>1</fixsmell>
+			<priority>3</priority>
+		</fix>
+		<fix>
+			<fixsmell>2</fixsmell>
+			<priority>3</priority>
+		</fix>
+			<fix>
+			<fixsmell>17</fixsmell>
+			<priority>3</priority>
+		</fix>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>39</id>
+		<name>Isolate Dynamic Receptor</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>40</id>
+		<name>Lazily Initialized Attribute</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>41</id>
+		<name>Move Eval from Runtime to Parse Time</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>42</id>
+		<name>Move Field</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>18</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>7</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>12</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>43</id>
+		<name>Move Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>18</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>20</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>3</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>7</fixsmell>
+			<priority>1</priority>
+		</fix>		
+		<fix>
+			<fixsmell>8</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>11</fixsmell>
+			<priority>1</priority>
+		</fix>
+		<fix>
+			<fixsmell>12</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>44</id>
+		<name>Parameterize Method</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>45</id>
+		<name>Preserve Whole Object</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>1</fixsmell>
+			<priority>3</priority>
+		</fix>
 		<fix>
 			<fixsmell>2</fixsmell>
 			<priority>1</priority>
 		</fix>
 		<fix>
-			<fixsmell>6</fixsmell>
+			<fixsmell>15</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>46</id>
+		<name>Pull Up Constructor Body</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>47</id>
+		<name>Pull Up Field</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>5</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>48</id>
+		<name>Pull Up Method</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>49</id>
+		<name>Push Down Field</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>13</fixsmell>
 			<priority>1</priority>
 		</fix>
 	</repair>
-	
 	<repair>
-		<id>4</id>
-		<name>rep4</name>
-		<description>aaaaaaaaaaaaaaaa</description>		
+		<id>50</id>
+		<name>Push Down Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>13</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>51</id>
+		<name>Recompose Conditional</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>52</id>
+		<name>Remove Assignments to Parameters</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>53</id>
+		<name>Remove Control Flag</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>54</id>
+		<name>Remove Middle Man</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>19</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>55</id>
+		<name>Remove Named Parameter</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>56</id>
+		<name>Remove Parameter</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>14</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>57</id>
+		<name>Remove Setting Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>15</fixsmell>
+			<priority>4</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>58</id>
+		<name>Remove Unused Default Parameter</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>59</id>
+		<name>Rename Method</name>
+		<description>description</description>
 		<fix>
 			<fixsmell>4</fixsmell>
 			<priority>1</priority>
-		</fix>	
+		</fix>
+		<fix>
+			<fixsmell>14</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<fix>
+			<fixsmell>11</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>60</id>
+		<name>Replace Abstract Superclass with Module</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>61</id>
+		<name>Replace Array with Object</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>17</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>62</id>
+		<name>Replace Conditional with Polymorphism</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>8</fixsmell>
+			<priority>4</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>63</id>
+		<name>Replace Constructor with Factory Method</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>64</id>
+		<name>Replace Data Value with Object</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>17</fixsmell>
+			<priority>1</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>65</id>
+		<name>Replace Delegation With Hierarchy</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>66</id>
+		<name>Replace Delegation with Inheritance</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>18</fixsmell>
+			<priority>4</priority>
+		</fix>
+		<fix>
+			<fixsmell>19</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>67</id>
+		<name>Replace Dynamic Receptor with Dynamic Method Definition</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>68</id>
+		<name>Replace Error Code with Exception</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>69</id>
+		<name>Replace Exception with Test</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>70</id>
+		<name>Replace Hash with Object</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>71</id>
+		<name>Replace Inheritance with Delegation</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>13</fixsmell>
+			<priority>4</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>72</id>
+		<name>Replace Loop with Collection Closure Method</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>73</id>
+		<name>Replace Magic Number with Symbolic Constant</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>74</id>
+		<name>Replace Method with Method Object</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>2</fixsmell>
+			<priority>5</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>75</id>
+		<name>Replace Nested Conditional with Guard Clauses</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>76</id>
+		<name>Replace Parameter with Explicit Methods</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>8</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>77</id>
+		<name>Replace Parameter with Method</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>2</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>78</id>
+		<name>Replace Record with Data Class</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>79</id>
+		<name>Replace Subclass with Fields</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>80</id>
+		<name>Replace Temp with Chain</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>1</fixsmell>
+			<priority>4</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>81</id>
+		<name>Replace Temp with Query</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>82</id>
+		<name>Replace Type Code with Class</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>17</fixsmell>
+			<priority>3</priority>
+		</fix>
+		<fix>
+			<fixsmell>8</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>83</id>
+		<name>Replace Type Code with Module Extension</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>84</id>
+		<name>Replace Type Code With Polymorphism</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>85</id>
+		<name>Replace Type Code with State/Strategy</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>17</fixsmell>
+			<priority>4</priority>
+		</fix>
+		
+		<fix>
+			<fixsmell>8</fixsmell>
+			<priority>2</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>86</id>
+		<name>Replace Type Code with Subclasses</name>
+		<description>description</description>
+		<fix>
+			<fixsmell>17</fixsmell>
+			<priority>3</priority>
+		</fix>
+	</repair>
+	<repair>
+		<id>87</id>
+		<name>Self Encapsulate Field</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>88</id>
+		<name>Separate Query from Modifier</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>89</id>
+		<name>Split Temporary Variable</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>90</id>
+		<name>Substitute Algorithm</name>
+		<description>description</description>
 		<fix>
 			<fixsmell>5</fixsmell>
-		<cause>
-			<causesmell>5</causesmell>
-			<probabilty>50</probabilty>
-		</cause>	
-			<priority>2</priority>
-		</fix>	
-				<fix>
-			<fixsmell>6</fixsmell>
-			<priority>1</priority>
-		</fix>	
+			<priority>3</priority>
+		</fix>
 	</repair>
 </repairs>

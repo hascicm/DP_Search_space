@@ -83,15 +83,17 @@ public class FileHandler {
 			DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			Document doc = dBuilder.parse(file);
 			NodeList repairList = doc.getElementsByTagName("repair");
+			Integer couter = 0;
 
 			for (int i = 0; i < repairList.getLength(); i++) {
 				Node repairNode = repairList.item(i);
 				Repair repairTemp = new Repair();
-
 				if (repairNode.getNodeType() == Node.ELEMENT_NODE) {
 
 					Element repairE = (Element) repairNode;
 					repairTemp.setId(Integer.parseInt(repairE.getElementsByTagName("id").item(0).getTextContent()));
+					repairE.getElementsByTagName("id").item(0).setTextContent("dsadsa");
+					couter++;
 					repairTemp.setName(repairE.getElementsByTagName("name").item(0).getTextContent());
 					repairTemp.setDescription(repairE.getElementsByTagName("description").item(0).getTextContent());
 
@@ -133,7 +135,6 @@ public class FileHandler {
 
 					repairs.add(repairTemp);
 				}
-				System.out.println("------------------------");
 			}
 		} catch (ParserConfigurationException | IOException | SAXException e) {
 			e.printStackTrace();

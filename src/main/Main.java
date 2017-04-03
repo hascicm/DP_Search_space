@@ -16,13 +16,13 @@ public class Main {
 	public static void main(String[] args) {
 
 		FileHandler.loadSmells(smells);
-		// FileHandler.printSmells(smells);
+		 FileHandler.printSmells(smells);
 		FileHandler.loadRepairs(repairs, smells);
 
 		// FileHandler.printSmells(smells);
-		// FileHandler.printrepairs(repairs);
+		 FileHandler.printrepairs(repairs);
 
-		System.out.println("number of loaded smells   : " + smells.size());
+	/*	System.out.println("number of loaded smells   : " + smells.size());
 		System.out.println("number of loaded repairs  : " + repairs.size());
 		
 		State s = new State();
