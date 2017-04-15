@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<repairs>
+	<repair>
+		<id>0</id>
+		<name>IPO</name>
+		<description>Introduce Parameter Object</description>
+	</repair>
+	<repair>
+		<id>1</id>
+		<name>LE</name>
+		<description>Log Exception</description>
+		<fix>
+			<fixsmell>18</fixsmell>
+			<priority>2</priority>
+		</fix>
+		<cause>
+			<causesmell></causesmell>
+			<probabilty></probabilty>
+		</cause>
+	</repair>
+	<repair>
+		<id>2</id>
+		<name>MM</name>
+		<description>Move Method</description>
+	</repair>
+	<repair>
+		<id>3</id>
+		<name>RET</name>
+		<description>description</description>
+	</repair>
+	<repair>
+		<id>4</id>
+		<name>RET</name>
+		<description>Remove Exception Throw</description>
+	</repair>
+	<repair>
+		<id>5</id>
+		<name>RMN</name>
+		<description>Replace Magic Number with Symbolic Constant</description>
+	</repair>
+	<repair>
+		<id>6</id>
+		<name>RTC</name>
+		<description>Remove Try-Catch</description>
+	</repair>
+</repairs>

@@ -15,7 +15,6 @@
 		<name>Long Parameter List</name>
 		<priority>4</priority>
 	</smell>
-	
 	<smell>
 	<id>3</id>
 		<name>Feature Envy</name>
@@ -57,8 +56,6 @@
 		<name>Lazy Class</name>
 		<priority>6</priority>
 	</smell>
-
-	
 	<smell>
 		<id>11</id>
 		<name>Alternative Classes with Different Interfaces</name>

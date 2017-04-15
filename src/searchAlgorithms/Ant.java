@@ -1,4 +1,4 @@
-package model;
+package searchAlgorithms;
 
 public class Ant {
 

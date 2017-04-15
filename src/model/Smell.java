@@ -15,7 +15,7 @@ public class Smell {
 
 	public Smell(String name) {
 		this.name = name;
-		this.priority = 5;
+		this.priority = 10;
 	}
 
 	public int getId() {

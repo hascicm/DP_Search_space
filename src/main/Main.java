@@ -1,8 +1,6 @@
 package main;
 
-import java.awt.RadialGradientPaint;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import model.Repair;
@@ -16,51 +14,63 @@ public class Main {
 	public static void main(String[] args) {
 
 		FileHandler.loadSmells(smells);
-		 FileHandler.printSmells(smells);
 		FileHandler.loadRepairs(repairs, smells);
 
 		// FileHandler.printSmells(smells);
-		 FileHandler.printrepairs(repairs);
-
-	/*	System.out.println("number of loaded smells   : " + smells.size());
-		System.out.println("number of loaded repairs  : " + repairs.size());
+		// FileHandler.printrepairs(repairs);
 		
 		State s = new State();
-		s.getSmells().add(smells.get(6));
-		s.getSmells().add(smells.get(2));
-
-		s.getAvanlibleRepairs().add(repairs.get(0));
-		s.getAvanlibleRepairs().add(repairs.get(1));
-		s.getAvanlibleRepairs().add(repairs.get(2));
-		
+		s.getSmells().add(smells.get(0));
 		s.printSmells();
+		s.findRepairsForSmells(repairs);
+		
 		s.printAvanlibleRepairs();
-		
-		ArrayList<State> states =  s.applyRepairs();
-		
-		System.out.println("-output-");
-	
-		for (State state : states){
-			
+		s.calculateFitness();
+		List<State> act = s.expandStete();
+		System.out.println("----------generation best---------");
+
+		System.out.println("size=   " + act.size());
+		for (State state : act){
+			System.out.println("-------------state------------");
 			state.printSmells();
-			System.out.println("-----END-----");
+			state.printAvanlibleRepairs();
+			
 		}
 		
 		
-		// s.applyRepair(repairs.get(0));
-//		s.applyRepair(repairs.get(0));
-//		s.applyRepair(repairs.get(2));
-//		s.applyRepair(repairs.get(3));
-/*		State s2 = new State();
-
-		s2.getSmells().add(smells.get(2));
-		s2.getSmells().add(smells.get(6));
-
-		s.printSmells();
-		s2.printSmells();
-
-		if (s.getSmells().containsAll(s2.getSmells()) && s2.getSmells().containsAll(s.getSmells()))
-			System.out.println("comapre sucess");
-*/
+		
+//		
+//		
+//		State best = s;
+//		List<State> act = s.applyRepairs();
+//		List<State> temp = new ArrayList<State>();
+//
+//		for (int i = 0; i < 6; i++) {
+//			
+//			for (State state : act) {
+//				temp.addAll(state.applyRepairs());
+//			}			
+//			
+//			for (State findbest : temp) {
+//				//System.out.println(findbest.getFittnes());
+//				best = temp.get(0);
+//				if (best.getFittnes() < findbest.getFittnes()) {
+//					best = findbest;
+//				}
+//			}
+//			
+//			act = temp;
+//			temp = new ArrayList<State>();
+//			
+//			System.out.println("----------generation best---------");
+//			best.printSmells();
+//			
+//
+//		}
+//		
+//		
+//		
+//		System.out.println("----------generation best---------");
+//		best.printSmells();
 	}
 }

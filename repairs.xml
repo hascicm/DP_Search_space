@@ -41,6 +41,10 @@
 			<fixsmell>14</fixsmell>
 			<priority>2</priority>
 		</fix>
+		<cause>
+			<causesmell>0</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>6</id>
@@ -69,6 +73,10 @@
 			<fixsmell>0</fixsmell>
 			<priority>5</priority>
 		</fix>
+		<cause>
+			<causesmell>5</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>10</id>
@@ -177,6 +185,14 @@
 			<fixsmell>8</fixsmell>
 			<priority>1</priority>
 		</fix>
+		<cause>
+			<causesmell>0</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
+		<cause>
+			<causesmell>1</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>18</id>
@@ -232,6 +248,10 @@
 			<fixsmell>20</fixsmell>
 			<priority>1</priority>
 		</fix>
+		<cause>
+			<causesmell>19</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>25</id>
@@ -258,6 +278,10 @@
 			<fixsmell>14</fixsmell>
 			<priority>2</priority>
 		</fix>
+		<cause>
+			<causesmell>0</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>27</id>
@@ -267,6 +291,10 @@
 			<fixsmell>20</fixsmell>
 			<priority>2</priority>
 		</fix>
+		<cause>
+			<causesmell>1</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>28</id>
@@ -350,7 +378,7 @@
 			<fixsmell>2</fixsmell>
 			<priority>3</priority>
 		</fix>
-			<fix>
+		<fix>
 			<fixsmell>17</fixsmell>
 			<priority>3</priority>
 		</fix>
@@ -414,7 +442,7 @@
 		<fix>
 			<fixsmell>7</fixsmell>
 			<priority>1</priority>
-		</fix>		
+		</fix>
 		<fix>
 			<fixsmell>8</fixsmell>
 			<priority>1</priority>
@@ -477,6 +505,10 @@
 			<fixsmell>13</fixsmell>
 			<priority>1</priority>
 		</fix>
+		<cause>
+			<causesmell>10</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>50</id>
@@ -510,6 +542,10 @@
 			<fixsmell>19</fixsmell>
 			<priority>1</priority>
 		</fix>
+		<cause>
+			<causesmell>20</causesmell>
+			<probabilty>100</probabilty>
+		</cause>
 	</repair>
 	<repair>
 		<id>55</id>
@@ -737,7 +773,7 @@
 			<fixsmell>17</fixsmell>
 			<priority>4</priority>
 		</fix>
-		
+
 		<fix>
 			<fixsmell>8</fixsmell>
 			<priority>2</priority>
